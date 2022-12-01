@@ -5,32 +5,31 @@
 # This program finds area of triangle
 
 
-def calculate_area(base: int, height: int) -> None:
+def calculate_area_triangle(base, height):
     # calculate area
 
     # process
     area = (base * height) / 2
 
     # output
-    print("The area is {0} cm²".format(area))
+    print("\nThe area is {0} cm².".format(area))
 
 
 def main():
-    # this function gets base and height
+    # this function calls other functions
 
     # input
-    base_from_user = int(input("Enter the base of a triangle (cm): "))
-    height_from_user = int(input("Enter the height of a triangle (cm): "))
-    print("")
+    height_from_user = input("Enter the height of a triangle (cm): ")
+    base_from_user = input("Enter the base length of a triangle (cm): ")
 
     try:
-        base = float(base_from_user)
-        height = float(height_from_user)
-        calculate_area(base_from_user, height_from_user)
+        height = int(height_from_user)
+        base = int(base_from_user)
+        calculate_area_triangle(base, height)
     except ValueError:
-        print("Invalid input, please try again.")
+        print("\nInvalid Input")
 
-    print("\n\nDone.")
+    print("\nDone.")
 
 
 if __name__ == "__main__":
